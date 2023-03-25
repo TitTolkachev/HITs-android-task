@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TopicActivity">
@@ -17,15 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/topic_clouds"
-        tools:ignore="VisualLintBounds" />
+        tools:ignore="VisualLintBounds,ImageContrastCheck" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -57,12 +60,94 @@
                 app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
                 tools:ignore="TextContrastCheck" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
             <androidx.constraintlayout.helper.widget.Flow
-                android:layout_width="match_parent"
-                android:layout_height="1000dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/FlowLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="imageView6,imageView8,imageView10,imageView12"
+                app:flow_maxElementsWrap="1"
+                app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSubtitle" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/FlowRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="imageView7,imageView9,imageView11,imageView13"
+                app:flow_maxElementsWrap="1"
+                app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSubtitle" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card1"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card2"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card3"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card4"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card5"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card6"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card2"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card1"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
