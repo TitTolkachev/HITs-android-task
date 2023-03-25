@@ -23,6 +23,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -75,7 +76,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
-                app:constraint_referenced_ids="imageView6,imageView8,imageView10,imageView12"
+                app:constraint_referenced_ids="imageView6,imageView8,imageView10,imageView12,imageView14,imageView16"
                 app:flow_maxElementsWrap="1"
                 app:flow_wrapMode="chain"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +92,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
-                app:constraint_referenced_ids="imageView7,imageView9,imageView11,imageView13"
+                app:constraint_referenced_ids="imageView7,imageView9,imageView11,imageView13,imageView15,imageView17"
                 app:flow_maxElementsWrap="1"
                 app:flow_wrapMode="chain"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -147,6 +148,29 @@
                 app:srcCompat="@drawable/topic_card1"
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
+            <ImageView
+                android:id="@+id/imageView14"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card4"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card3"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card6"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                style="@style/topic_card"
+                app:srcCompat="@drawable/topic_card5"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

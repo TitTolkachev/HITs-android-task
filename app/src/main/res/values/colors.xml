@@ -5,7 +5,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Sign Up -->
-    <color name="arrow_back_ripple_color">#B5B5B5</color>
+    <color name="arrow_back_ripple_color">#9AA5A5A5</color>
     <color name="edit_text_color">#78746D</color>
     <color name="sign_up_text_color">#3C3A36</color>
     <color name="sign_in_text_color">#78746D</color>
