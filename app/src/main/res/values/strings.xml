@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">lesson22032023</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_up_btn">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="sign_in_screen_image">Sign in screen image</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="back_arrow_description">Back Arrow</string>
+</resources>
