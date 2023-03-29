@@ -3,7 +3,6 @@ package com.example.lesson22032023.mvvm.viewmodel
 import android.app.Application
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.lesson22032023.R
@@ -22,6 +21,9 @@ class SignUpViewModel(application: Application) : AndroidViewModel(application) 
         MutableLiveData()
     val password: MutableLiveData<String> =
         MutableLiveData()
+
+    val isErrorFound: MutableLiveData<Boolean> = MutableLiveData(false)
+    val errorMessage: MutableLiveData<String> = MutableLiveData()
 
     init {
         initModel()
@@ -52,25 +54,28 @@ class SignUpViewModel(application: Application) : AndroidViewModel(application) 
                 signUp(data)
             }
             ValidationError.EmptyName -> {
-                showError(getApplication<Application>().applicationContext.resources.getString(R.string.invalid_name_error))
+                errorMessage.value =
+                    getApplication<Application>().applicationContext.resources.getString(R.string.invalid_name_error)
+                isErrorFound.value = true
             }
             ValidationError.EmptyEmail -> {
-                showError(getApplication<Application>().applicationContext.resources.getString(R.string.invalid_email_error))
+                errorMessage.value =
+                    getApplication<Application>().applicationContext.resources.getString(R.string.invalid_email_error)
+                isErrorFound.value = true
             }
             ValidationError.EmptyPassword -> {
-                showError(getApplication<Application>().applicationContext.resources.getString(R.string.invalid_password_error))
+                errorMessage.value =
+                    getApplication<Application>().applicationContext.resources.getString(R.string.invalid_password_error)
+                isErrorFound.value = true
             }
         }
-    }
-
-    private fun showError(error: String) {
-        Toast.makeText(getApplication(), error, Toast.LENGTH_SHORT).show()
     }
 
     private fun signUp(data: AuthData) {
         model.updateAuthData(data)
 
-        val intent = Intent(getApplication<Application>().applicationContext, TopicActivity::class.java)
+        val intent =
+            Intent(getApplication<Application>().applicationContext, TopicActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION or Intent.FLAG_ACTIVITY_NEW_TASK)
         getApplication<Application>().applicationContext.startActivity(intent)
     }

@@ -3,6 +3,7 @@ package com.example.lesson22032023.mvvm.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.lesson22032023.databinding.ActivitySignUpBinding
 import com.example.lesson22032023.mvvm.viewmodel.SignUpViewModel
@@ -35,6 +36,14 @@ class SignUpActivity : AppCompatActivity() {
         val passwordTextView: TextView = binding.passwordInputEditText
         viewModel.password.observe(this) {
             passwordTextView.text = it
+        }
+
+        viewModel.isErrorFound.observe(this) {
+            if (it) {
+                Toast.makeText(this, viewModel.errorMessage.value, Toast.LENGTH_SHORT).show()
+                viewModel.isErrorFound.value = false
+                viewModel.errorMessage.value = null
+            }
         }
 
         binding.buttonSignUp.setOnClickListener {
