@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/black"
-    tools:context=".mvp.view.SignUpActivity">
+    tools:context=".mvvm.view.SignUpActivity">
 
 
     <ImageButton

@@ -1,4 +1,4 @@
-package com.example.lesson22032023.mvp.model
+package com.example.lesson22032023.mvvm.model
 
 import android.content.SharedPreferences
 
