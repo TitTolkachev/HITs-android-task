@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">HITs</string>
+
     <string name="sign_up">Sign up</string>
     <string name="sign_up_btn">Sign up</string>
     <string name="log_in">Log in</string>
@@ -12,4 +13,8 @@
     <string name="topic_title"><b>What Brings you</b>\nto Silent Moon?</string>
     <string name="topic_subtitle">choose a topic to focus on:</string>
     <string name="topic_clouds_description">Clouds</string>
+
+    <string name="invalid_name_error">Имя не оч, введи другое</string>
+    <string name="invalid_email_error">Почта не оч, введи другую</string>
+    <string name="invalid_password_error">Пароль не оч, введи другой</string>
 </resources>

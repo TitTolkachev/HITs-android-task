@@ -1,7 +1,8 @@
-package com.example.lesson22032023
+package com.example.lesson22032023.mvp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.lesson22032023.R
 
 class TopicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
